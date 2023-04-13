@@ -1,13 +1,13 @@
 const express=require('express') //
-const bodyParser=require('body-parser') // pour parser les données de la requête
+//const bodyParser=require('body-parser') // pour parser les données de la requête
 const mongoose=require('mongoose') // pour la connexion à la base de données
 
 const app=express();
 
 // import client schema from client.model.js 
 const Client=require('./app/model/client.model');
-app.use(bodyParser.urlencoded({extended:true})); // pour parser les données de la requête
-app.use(bodyParser.json()); // pour parser les données de la requête
+//app.use(bodyParser.urlencoded({extended:true})); // pour parser les données de la requête
+//app.use(bodyParser.json()); // pour parser les données de la requête
 mongoose.connect('mongodb+srv://protechgabes:iQYVAUCyL9sZ7Aez@cluster0.hfjjthx.mongodb.net/serviceCl',
  {useNewUrlParser: true, useUnifiedTopology: true}
  ).then(()=>console.log("connected to database"))
